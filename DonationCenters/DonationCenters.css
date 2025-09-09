@@ -1,0 +1,151 @@
+.donation-centers-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #fafafa;
+}
+
+.donation-centers-container h1 {
+  color: #d32f2f;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.search-icon {
+  color: #999;
+  margin-right: 10px;
+}
+
+.centers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.center-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.center-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.center-card h2 {
+  color: #d32f2f;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.center-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.icon {
+  color: #d32f2f;
+}
+
+.center-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+.call-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.call-btn:hover {
+  background-color: #ddd;
+}
+
+.map-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.map-btn:hover {
+  background-color: #b71c1c;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .donation-centers-container {
+    padding: 20px 15px;
+  }
+
+  .center-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}

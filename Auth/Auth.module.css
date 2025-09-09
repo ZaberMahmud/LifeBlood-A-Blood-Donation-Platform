@@ -1,0 +1,125 @@
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffebee 100%);
+  padding: 2rem;
+}
+
+.authForm {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(229, 28, 35, 0.1);
+  width: 100%;
+  max-width: 450px;
+  border-top: 4px solid #e51c23;
+  position: relative;
+  overflow: hidden;
+}
+
+.authForm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #e51c23 0%, #c62828 100%);
+}
+
+.authTitle {
+  color: #e51c23;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.label::after {
+  content: '*';
+  color: #e51c23;
+  margin-left: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #e51c23;
+  box-shadow: 0 0 0 2px rgba(229, 28, 35, 0.2);
+}
+
+.error {
+  color: #e51c23;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #e51c23 0%, #c62828 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #c62828 0%, #e51c23 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 28, 35, 0.3);
+}
+
+.toggleText {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+}
+
+.toggleLink {
+  color: #e51c23;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.toggleLink:hover {
+  color: #c62828;
+  text-decoration: underline;
+}
+
+/* Blood drop icon for extra theme */
+.bloodDropIcon {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 60px;
+  height: 60px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e51c23"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat center;
+  background-size: contain;
+}

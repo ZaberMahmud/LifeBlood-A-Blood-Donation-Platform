@@ -1,0 +1,313 @@
+:root {
+  --primary-color: #ff4757;
+  --primary-dark: #e84118;
+  --secondary-color: #ff6b81;
+  --light-color: #f8f9fa;
+  --dark-color: #2f3542;
+  --gray-color: #747d8c;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 30px rgba(255, 71, 87, 0.1);
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark-color);
+}
+
+.profile-loading, .profile-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.profile-loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 71, 87, 0.2);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.profile-error button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.profile-error button:hover {
+  background-color: var(--primary-dark);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(255, 71, 87, 0.3);
+}
+
+.profile-header h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.blood-type-badge {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(232, 65, 24, 0.2);
+}
+
+.blood-type-badge svg {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.profile-content {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-section {
+  margin-bottom: 3rem;
+}
+
+.profile-section h2 {
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-section h2 svg {
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--light-color);
+  padding: 1.25rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 71, 87, 0.1);
+}
+
+.info-icon {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--gray-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dark-color);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.edit-profile-btn, .logout-btn {
+  padding: 0.85rem 1.75rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.edit-profile-btn {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+.edit-profile-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+}
+
+.edit-profile-btn svg {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.logout-btn {
+  background-color: #f8f9fa;
+  color: var(--dark-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logout-btn svg {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+
+/* Completion Meter Styles */
+.completion-meter {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.completion-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.completion-icon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.completion-percentage {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.meter-container {
+  height: 10px;
+  background-color: #f1f2f6;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.meter-fill {
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.completion-tip {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+  
+  .profile-content {
+    padding: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .edit-profile-btn, .logout-btn {
+    width: 100%;
+  }
+}
